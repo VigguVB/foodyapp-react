@@ -1,0 +1,28 @@
+header{
+    height:60px;
+    background-color:hwb(4 12% 33%);
+    color: white
+}
+
+#icon{
+    float:left;
+    margin-left: 1%;
+    margin-top: -0.5%;
+}
+
+#social{
+    float:right;
+    margin-right: 1%;
+    margin-top: 0.5%;
+}
+
+.slogo{
+    height: 50px;
+    width: 50px;
+}
+.btnclass{
+    margin-top: 1.2%;
+    margin-left: 2%;
+    background-color: orange;
+    border: none;
+}

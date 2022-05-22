@@ -1,0 +1,53 @@
+.restdiv{
+    width: 98%;
+    height: 350px;
+    margin-left: 1%;
+    margin-top: 1%;
+    box-shadow: 0.5px 0.5px 12px rgba(0, 0, 0, 0.431);
+}
+.imagediv{
+    width: 37%;
+    height: 350px;
+    margin: 0.7%;
+    float: left;
+}
+.right_div{
+    width: 59%;
+    height: 340px;
+    float: left;
+    margin: 0.7%;
+}
+.restname{
+    font-family: Hack;
+    color: rgb(8, 98, 171);
+    text-align: center;
+    font-weight: 600;
+}
+.address{
+    margin-left: 3%;
+    color: rgb(8, 98, 171);
+    text-align: center;
+}
+.otherdetails{
+    margin-left: 3%;
+    color: rgb(5, 109, 189);
+    font-weight: 700;
+    margin-top: 3.5%;
+}
+.restbtn{
+    margin-left: 17%;
+    width: 150px;
+    height: 40px;
+    border-radius: 5px;
+    color: orangered;
+    border: 3px solid orangered;
+    background-color: white;
+    margin-top: 1.5%;
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+}
+.restbtn:hover{
+    color: white;
+    background-color: orangered;
+}

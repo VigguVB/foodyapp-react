@@ -1,0 +1,194 @@
+.mainDiv{
+    width: 96%;
+    height: 600px;
+    box-shadow: 1px 1px 10px black;
+    margin-left: 2%;
+    margin-top: 1%;
+
+}
+.leftdiv{
+    width: 25%;
+    height: 568px;
+    box-shadow: inset 0.1px 0.1px 10px rgba(0, 0, 0, 0.431);
+    margin-left: 1%;
+    margin-top: 1%;
+    float: left;
+}
+.rightdiv{
+    width: 72%;
+    height: 568px;
+    box-shadow: inset 0.1px 0.1px 10px rgba(0, 0, 0, 0.431);
+    margin-left: 1%;
+    margin-top: 1%;
+    float: left;  
+    overflow-y: scroll;
+}
+.filterDiv{
+    width: 20%;
+    height: 600px;
+    margin: 1%;
+    float: left;
+    box-shadow: 2px 2px 15px #000000e3;
+}
+.backnav{
+    margin-left: 1%;
+    color: #0a0a46;
+    text-decoration: underline;
+}
+.backnav:hover{
+    color: red;
+}
+.filterHeading{
+    text-align: center;
+    color: #0a0a46;
+}
+.hr{
+    border: 2px solid #0a0a46;
+}
+.selectMeal{
+    width: 95%;
+    height: 250px;
+}
+.container >input{
+    margin-left: 15%;
+    color: black;
+    display: inline-block    
+}
+.container >label{
+    font-weight: 600;
+    color: #0a0a46;
+
+}
+.container{
+    margin-top: 2%;
+}
+.listDiv{
+    width: 60%;
+    height: 750px;
+    margin: 1%;
+    float: left;
+    box-shadow: 2px 2px 15px #000000e3;
+    overflow-y: scroll;
+    padding-bottom: 1%;
+}
+.itemContainer{
+    width: 95%;
+    height: 320px;
+    margin-top: 2%;
+    margin-left: 2%;
+    box-shadow: 2px 2px 10px #000000d5;
+    display: block;
+}
+
+.component1{
+ width: 40%;
+ height: 285px;
+ margin: 2%;
+ float: left;
+}
+.component1 >img{
+    width: 100%;
+    height: 285px;
+} 
+
+.component2{
+    width: 50%;
+    height: 285px;
+    margin: 2%;
+    float: left;
+    /* border: 2px solid red; */
+   }
+   
+.heading{
+    text-align: center;
+    font-size: 40px;
+    color: hsl(0, 93%, 32%);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bolder;    
+}
+.description{
+    font-size: 17px;
+    color: #064375;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;    
+}
+.variety{
+    width: 90px;
+    height: 25px;
+    font-weight: bold;
+    background-color: #064375;
+    border-radius: 5px;
+    color: white;
+    float: left;
+    margin-left: 1%;
+    margin-right: 2%;
+}
+.browse{
+    width: 130px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: white;
+    color: rgb(238, 70, 9);
+    margin-left: 10%;
+    margin-top: 4%;
+    font-size: 15px;
+    font-weight: bold;
+    border: 3px groove rgb(240, 70, 8);
+}
+.browse:hover{
+    background-color: #f84b0c;
+    color: white;
+}
+
+/*footer start */
+
+.footer{
+    background-color: hsl(0, 96%, 39%);
+    width: 100%;
+    height: 110px;
+    display: flex;
+}
+.contact{
+    width: 50%;
+    height: 90px;
+    float: left;
+    color: white;
+    margin-left: 2%;
+}
+.copyright{
+    width: 50%;
+    height: 90px;
+    float: left;
+    color: white;
+    margin-left: 50%;
+    margin-top: 2%;
+}
+@media screen and (max-width: 1600px) {
+    .variety{
+        margin-left: 0.5%;
+        margin-right: 0.5%;  
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    .itemContainer{
+            height: 380px;
+    }
+    .variety{
+        margin-left: 5%;
+        margin-right: 5%;
+        margin-top: 1%;  
+    }
+    .browse{
+        margin-left: 5%;
+    }
+   
+}
+@media screen and (max-width: 1200px) {
+    .itemContainer{
+        height: 420px;
+}
+.browse{
+    margin-left: 5%;
+}
+}
