@@ -1,0 +1,13 @@
+.radio{
+    margin-left: 6%;
+    margin-top: 3%;
+    color: rgb(5, 109, 189);
+}
+h2{
+    margin-left: 6%;
+    text-decoration: underline;
+    color: rgb(5, 109, 189)
+}
+label{
+    font-weight: 600;
+}

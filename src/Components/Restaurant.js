@@ -3,14 +3,16 @@ import './Restaurant.css'
 function Restaurant(props) {
 
     const restaurants = ({ restdata }) => {
-        console.log(restdata)
-        if (restdata) {
-            return restdata.map((item) => {
+
+        if (restdata[0]) {
+       
+            return restdata[0].map((item) => {
+
                 return (
 
-                    <div className="restdiv">
+                    <div key={item._id} className="restdiv">
                         <div className='imagediv'>
-                            <img src={item.image_gallery[3]} width="100%" height="335px" />
+                            <img src={item.restaurant_thumb} width="100%" height="355px" />
                         </div>
                         <div className='right_div'>
                             <h1 className='restname'>{item.restaurant_name}</h1>
