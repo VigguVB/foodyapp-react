@@ -10,7 +10,8 @@ function Listing(props) {
     let params = useParams()
     restaurantlist = `https://foody-app-api.herokuapp.com/restaurants/${params.id}`
     
-
+    let mealId = params.id?params.id:1;
+    sessionStorage.setItem("mealId", mealId);
     const[restaurantData, setRestaurantData]= useState([])
 
     useEffect(()=>{
@@ -35,8 +36,9 @@ function Listing(props) {
                 <Costfilter />
             </div>
             <div className='rightdiv'>
-                
+              
                 <Restaurant restdata={restaurantData} />
+          
             </div>
         </div>
     );

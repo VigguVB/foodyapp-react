@@ -22,6 +22,7 @@
     color: rgb(8, 98, 171);
     text-align: center;
     font-weight: 600;
+
 }
 .address{
     margin-left: 3%;
@@ -35,15 +36,15 @@
     margin-top: 3.5%;
 }
 .restbtn{
-    margin-left: 17%;
-    width: 150px;
-    height: 40px;
+    margin-left: 4%;
+    width: 110px;
+    height: 28px;
     border-radius: 5px;
-    color: orangered;
-    border: 3px solid orangered;
-    background-color: white;
+    color: white;
+    border: none;
+    background-color: hsl(248, 87%, 27%);
     margin-top: 1.5%;
-    font-size: 18px;
+    font-size: 15px;
     font-weight: 700;
     text-align: center;
 }

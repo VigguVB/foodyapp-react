@@ -2,7 +2,7 @@ import React from 'react';
 import './Costfilter.css'
 function Costfilter(props) {
     return (
-        <div class="container">
+        <div className="container">
   <h2>Cost Filter</h2>
   
   <form>

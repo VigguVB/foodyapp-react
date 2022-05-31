@@ -1,0 +1,79 @@
+.menudiv{
+    width: 100%;
+    height: 140px;
+    box-shadow: 0.2px 0.2px 12px rgba(0, 0, 0, 0.151);
+    margin-top: 3%;
+    margin-left: 3%;
+}
+#imgdiv1{
+    width: 135px;
+    height: 130px;
+    float: left;
+}
+.menudisplaydiv1{
+    width: 50%;
+    height: 130px;
+    float: left;
+    margin-left: 5%;
+    margin-top: 0.3%;
+}
+#menu_name{
+    text-align: center;
+    color: #19078e;
+    margin-top: 0%;
+}
+#menu_desc{
+    text-align: center;
+    color:#5d4dc5;  
+}
+#type{
+    width: 170px;
+    height: 35px;
+    margin-left: 2%;
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+    background-color: #055474;
+    border: none;
+}
+#rupee{
+    width: 100px;
+    background-color: rgb(6, 158, 6);
+    height: 35px;
+    margin-left: 15%;
+    font-size: 24px;
+    font-weight: 700;
+    color: white;
+    text-align: center;
+    border: none;
+}
+.menudisplaydiv2{
+    width: 20%;
+    height: 130px;
+    float: left;
+    margin-left: 1%;
+    margin-top: 0.3%; 
+}
+.set1{
+    margin-top: 16%;
+    width: 50px;
+    height: 40px;
+    margin-left: 20%;
+    background-color: red;
+    border: none;
+    color: white;
+}
+.set2{
+    margin-top: 16%;
+    width: 50px;
+    height: 40px;
+    margin-left: 5%;
+    background-color: rgb(6, 158, 6);
+    border: none;
+    color: white;
+}
+.countitem{
+    font-size: 28px;
+    font-weight: 600;
+    margin-left: 5%;
+}
