@@ -16,7 +16,7 @@ function Restaurant(props) {
                             <img src={item.restaurant_thumb} width="100%" height="355px" />
                         </div>
                         <div className='right_div'>
-                        <Link to={`details/${item.restaurant_id}`}>
+                        <Link to={`/details/${item.restaurant_id}`}>
                             <h1 className='restname'>{item.restaurant_name}</h1>
                             </Link>
                             <h3 className='address'>{item.address}</h3>

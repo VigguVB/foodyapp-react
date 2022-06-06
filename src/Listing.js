@@ -13,6 +13,7 @@ function Listing(props) {
     let mealId = params.id?params.id:1;
     sessionStorage.setItem("mealId", mealId);
     const[restaurantData, setRestaurantData]= useState([])
+    const[isLoading, setIsLoading] = useState(true)
 
     useEffect(()=>{
         
@@ -20,7 +21,7 @@ function Listing(props) {
             .then(res=>res.json())
             .then((data)=>{
                 if(data){
-    
+                    setIsLoading(false)
                     setRestaurantData([...restaurantData, data])
      
                  
@@ -37,8 +38,8 @@ function Listing(props) {
             </div>
             <div className='rightdiv'>
               
-                <Restaurant restdata={restaurantData} />
-          
+                {!isLoading && <Restaurant restdata={restaurantData} />}
+                {isLoading && <h1 style={{marginLeft: "5%", marginTop: "1%", color:"orangered"}}>Loading<img src="https://i.ibb.co/Jq7HY8S/giphy.gif" width="300px" height="200px"/></h1>}
             </div>
         </div>
     );
