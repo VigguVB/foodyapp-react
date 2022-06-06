@@ -128,7 +128,7 @@ function PlaceOrder(props) {
                         </div>
                         <div id="btns">
                             <Link to={`/details/${mealId}`}>
-                            <button id="back2">CANCEL</button>
+                            <button id="back2">BACK</button>
                             </Link>
                         <button id="proceed">PROCEED</button>
                         </div>
