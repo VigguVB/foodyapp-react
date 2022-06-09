@@ -3,6 +3,7 @@ import { Link, useParams } from 'react-router-dom';
 import { createBrowserHistory } from 'history';
 import './details.css'
 import Menulist from './Menulist';
+import Header from '../Header';
 
 function Details(props) {
     let param = useParams();
@@ -58,6 +59,7 @@ function Details(props) {
     }
     return (
         <>
+        <Header />
             {restData.length > 0 &&
                 <div>
 
@@ -67,7 +69,7 @@ function Details(props) {
                                 <img src={restData[0]?.restaurant_thumb} width="100%" height="495px" />
                             </div>
                             <div id="rightdiv">
-                                <h1 id="restname">{restData[0].restaurant_name}</h1>
+                                <h1 id="restname2">{restData[0].restaurant_name}</h1>
                                 <h2 id='add'>{restData[0].address}</h2>
                                 <h4 className='rating'>{restData[0].rating_text}</h4>
                                 <h4 className='rating'>COST: ₹ {restData[0].cost}</h4>

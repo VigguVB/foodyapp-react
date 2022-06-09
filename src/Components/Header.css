@@ -12,8 +12,40 @@ header{
 
 #social{
     float:right;
-    margin-right: 1%;
-    margin-top: 0.5%;
+    margin-right: 2%;
+    margin-top: 1%;
+    width: 550px;
+}
+.signup{
+    font-size: 17px;
+    font-weight: 600;
+    width: 120px;
+    text-align: center;
+    height: 30px;
+    background-color: hwb(4 12% 33%);
+    color: white;
+    border: none;
+    margin-top: 1%;
+    border-radius: 5px;
+    float: left;
+    margin-right: 3%;
+}
+.glyphicon{
+    margin-right: 8%;
+}
+.signup:hover{
+    color:hwb(4 12% 33%);
+    background-color: white;
+}
+#list{
+    box-shadow: 1px 1px 12px black;
+    width: 150px;
+    text-align: center;
+    margin-top: 6%;
+    margin-left: 50%;
+    border-radius: 5px;
+    background-color: white ;
+    cursor: pointer;
 }
 
 .slogo{
@@ -25,4 +57,5 @@ header{
     margin-left: 2%;
     background-color: orange;
     border: none;
+
 }

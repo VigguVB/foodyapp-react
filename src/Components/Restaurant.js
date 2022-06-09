@@ -5,9 +5,9 @@ function Restaurant(props) {
 
     const restaurants = ({ restdata }) => {
 
-        if (restdata[0]) {
+        if (restdata) {
        
-            return restdata[0].map((item) => {
+            return restdata.map((item) => {
 
                 return (
                     

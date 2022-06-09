@@ -1,10 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import './placeOrder.css'
-import { Link, useParams } from 'react-router-dom';
+import { Link, useParams, useNavigate } from 'react-router-dom';
+import { createBrowserHistory } from 'history';
+import Header from '../Header';
 
 let url = "https://foody-app-api.herokuapp.com/menuItem"
+let postUrl = "https://foody-app-api.herokuapp.com/placeOrder"
 
 function PlaceOrder(props) {
+    const navigate = useNavigate()
     let param = useParams()
     console.log(param.restName)
     const mealId = sessionStorage.getItem('mealId') 
@@ -15,6 +19,9 @@ function PlaceOrder(props) {
     const [address, setAddress] = useState("#129/1, Bangalore");
     const [cost, setCost] = useState(0);
     const [menuItem, setMenuItem] = useState("");
+    const [orderStatus, setOrderStatus] = useState("");
+
+
 
 
     const handleName = (e) => {
@@ -32,6 +39,7 @@ function PlaceOrder(props) {
 
     useEffect(() => {
         let menuItem = sessionStorage.getItem('menu');
+        console.log(menuItem)
         let orderId = [];
         menuItem.split(',').map((item) => {
             orderId.push(parseInt(item));
@@ -78,7 +86,39 @@ function PlaceOrder(props) {
         }
     }
 
+    const proceed =()=>{
+
+        let items = []
+        menuItem.map((item)=>{
+            let ids = item.menu_id
+            items.push(ids)
+        })
+        fetch(postUrl,{
+            method:'POST',
+            headers:{
+                'Access-Control-Allow-Origin': "*",
+                'accept':'application/json',
+                'content-type':'application/json'
+            },
+            body:JSON.stringify(
+                {
+                    name: name,
+                    email: email,
+                    contact: phone,
+                    address: address,
+                    total_cost: cost,
+                    items: items
+                }
+            )
+        })
+        .then(res=>console.log(res.status))
+        .then(navigate("/viewOrder"))
+       
+    }
+
     return (
+        <>
+        <Header />
         <div className='maincontainer'>
             <div id="restDiv">
                 <div className='container'>
@@ -130,7 +170,8 @@ function PlaceOrder(props) {
                             <Link to={`/details/${mealId}`}>
                             <button id="back2">BACK</button>
                             </Link>
-                        <button id="proceed">PROCEED</button>
+                       
+                        <button onClick={proceed} id="proceed">PROCEED</button>
                         </div>
                     </div>
                     
@@ -139,6 +180,7 @@ function PlaceOrder(props) {
 
             </div>
         </div>
+        </>
     );
 }
 

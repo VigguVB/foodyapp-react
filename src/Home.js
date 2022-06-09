@@ -4,7 +4,9 @@ import Quicksearch from './Quicksearch';
 import Search from './Search';
 function Home(props) {
     return (
+        
         <div>
+            <Header />
             <Search />
             <Quicksearch/>
             

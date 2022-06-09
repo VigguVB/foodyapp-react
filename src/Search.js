@@ -1,11 +1,14 @@
 import React, { useEffect, useState } from 'react';
-import "./Search.css"
+import "./Search.css";
+import { useNavigate } from 'react-router-dom';
+
 
 const cityUrl = "https://foody-app-api.herokuapp.com/location"
 const restUrl = "https://foody-app-api.herokuapp.com/restaurants?state_id="
 function Search(props) {
  const[citydata, setCitydata]= useState(null)
  const[restaurantData, setRestaurantdata] = useState(null)
+ const [restIdentity, setRestidentity]= useState(true)
 useEffect(()=>{
     function fetchCity(){
         fetch(cityUrl)
@@ -29,11 +32,19 @@ function fetchRestaurants(event){
     .then((data)=>{
         if(data){
             let restaurants = data.map((item)=>{
-                return <option>{item.restaurant_name} | {item.address}</option>
+                return <option key={item.restaurant_id}>{item.restaurant_id}. {item.restaurant_name} | {item.address}</option>
             })
             setRestaurantdata(restaurants)
         }
     })
+}
+const navigate = useNavigate()
+const handleRest = (event) =>{
+   
+    let rest_id = event.target.value.split('.')[0]
+
+    navigate(`/details/${rest_id}`)
+
 }
  return(
     <div >
@@ -50,7 +61,7 @@ function fetchRestaurants(event){
                     {citydata}
                     
                 </select>
-                <select className="restlist">
+                <select onChange={handleRest} className="restlist">
                     <option>-----PLEASE SELECT RESTAURANTS-----</option>
                     {restaurantData}
                 </select>
