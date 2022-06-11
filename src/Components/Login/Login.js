@@ -39,7 +39,8 @@ function Login(props) {
                 setMessage(data.token)
             }else{
                 sessionStorage.setItem('ltk',data.token)
-                if(sessionStorage.getItem("orderChoosed").length<1){
+                if(!sessionStorage.getItem("orderChoosed")){
+                    console.log("if navigate")
                     navigate('/')
                 }else{
                     navigate(`/details/${restID}`)
