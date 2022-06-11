@@ -59,3 +59,27 @@ header{
     border: none;
 
 }
+
+
+@media screen and (max-width: 412px) {
+    #icon{
+        font-size: 22px;
+        margin-left: 3%;
+    }
+    .btnclass{
+        margin-top: 3.2%;
+        margin-left: 6%;
+    }
+    #social{
+        width: 408px;
+    }
+    .signup{
+        width: 95px;
+        font-size: 11px;
+        margin-right: 1%;
+    }
+    header{
+        height: 100px;
+    }
+
+  }

@@ -34,7 +34,12 @@ function Header(props) {
    }
 
     function myorders(){
-        navigate('/ViewOrder')
+        if(sessionStorage.getItem('loginStatus')==="false"){
+            navigate('/alert')
+        }else{
+            navigate('/ViewOrder')
+        }
+
     }
 
     function conditionalHeader(){

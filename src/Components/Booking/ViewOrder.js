@@ -9,7 +9,8 @@ function ViewOrder(props) {
     const [orders, setOrders] = useState('')
 
     useEffect(()=>{
-        fetch(url)
+        let email = sessionStorage.getItem('userInfo').split(",")[1]
+        fetch(`${url}?email=${email}`)
         .then(res=>res.json())
         .then((data)=>{
             console.log(data)

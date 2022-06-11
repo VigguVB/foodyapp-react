@@ -21,7 +21,7 @@ function Details(props) {
     const [menuData, setMenuData] = useState("")
     const [finalOrderData, setFinalOrderData] = useState('')
     
-
+ 
 
     useEffect(() => {
         fetch(restUrl)
@@ -58,13 +58,11 @@ function Details(props) {
 
     const proceed = () => {
         let login = sessionStorage.getItem('loginStatus')
-        console.log(typeof login)
 
         sessionStorage.setItem("menu", finalOrderData)
         if(finalOrderData.length<1){
             alert("Please Add atleast one Items to the cart before CheckOut")
         }if(sessionStorage.getItem('loginStatus')==="false"){
-            console.log("else ifrunning")
             navigate('/alert')
         } else {
             navigate(`/placeOrder/${restData[0].restaurant_name}`)

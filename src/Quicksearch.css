@@ -78,3 +78,14 @@
 .componentSubHeading{
     color:gray;
 }
+
+@media screen and (max-width: 412px) {
+    .tileContainer{
+        width:96%;
+        margin-top: 5%;
+        box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.693);
+    }
+    #QuickSearch{
+        margin-top: 3%;
+    }
+  }

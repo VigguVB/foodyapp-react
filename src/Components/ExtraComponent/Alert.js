@@ -6,7 +6,7 @@ function Alert(props) {
         <>
         <Header />
         <div>
-       <h1 style={{textAlign:"center", color:"orangered"}}>Looks Like You haven't Logged In....Please Login Before Checking Out</h1>
+       <h1 style={{textAlign:"center", color:"orangered"}}>Looks Like You haven't Logged In....Please Login</h1>
        </div>
         </>
     );

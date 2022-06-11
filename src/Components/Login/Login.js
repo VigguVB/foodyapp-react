@@ -43,7 +43,7 @@ function Login(props) {
                     console.log("if navigate")
                     navigate('/')
                 }else{
-                    navigate(`/details/${restID}`)
+                    navigate(`/placeOrder/${restID}`)
                 }
                
             }
