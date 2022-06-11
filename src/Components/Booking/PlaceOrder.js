@@ -12,27 +12,16 @@ function PlaceOrder(props) {
     let param = useParams()
     console.log(param.restName)
     const mealId = sessionStorage.getItem('mealId') 
+    const userInfo = sessionStorage.getItem('userInfo').split(",")
 
-    const [name, setName] = useState("Vignesh");
-    const [email, setEmail] = useState("vigneshbhandarkar2014@gmail.com");
-    const [phone, setPhone] = useState("9900262848");
+    const [name, setName] = useState(userInfo[0]);
+    const [email, setEmail] = useState(userInfo[1]);
+    const [phone, setPhone] = useState(userInfo[2]);
     const [address, setAddress] = useState("#129/1, Bangalore");
     const [cost, setCost] = useState(0);
     const [menuItem, setMenuItem] = useState("");
     const [orderStatus, setOrderStatus] = useState("");
 
-
-
-
-    const handleName = (e) => {
-        setName(e.target.value)
-    }
-    const handleEmail = (e) => {
-        setEmail(e.target.value)
-    }
-    const handlePhone = (e) => {
-        setPhone(e.target.value)
-    }
     const handleAddress = (e) => {
         setAddress(e.target.value)
     }
@@ -131,19 +120,19 @@ function PlaceOrder(props) {
                             <div className='row'>
                                 <div className='form-group col-md-6'>
                                     <label for="fname">Name</label>
-                                    <input id="fname" name="name" className='form-control' value={name} onChange={handleName} />
+                                    <input id="fname" name="name" className='form-control' value={name} disabled/>
                                 </div>
                                 <div className='form-group col-md-6'>
                                     <label for="email">Email</label>
-                                    <input id="email" name="email" className='form-control' value={email} onChange={handleEmail} />
+                                    <input id="email" name="email" className='form-control' value={email} disabled/>
                                 </div>
                                 <div className='form-group col-md-6'>
                                     <label for="phone">Phone</label>
-                                    <input id="phone" name="phone" className='form-control' value={phone} onChange={handlePhone} />
+                                    <input id="phone" name="phone" className='form-control' value={phone} disabled/>
                                 </div>
                                 <div className='form-group col-md-6'>
                                     <label for="address">Address</label>
-                                    <input id="address" name="address" className='form-control' value={address} onChange={handleAddress} />
+                                    <input id="address" name="address" className='form-control' value={address} onChange={handleAddress} required/>
                                 </div>
                             </div>
 

@@ -1,6 +1,5 @@
 import React from 'react';
 import {BrowserRouter, Route, Routes} from 'react-router-dom';
-import Header from './Components/Header';
 import Home from './Home';
 import Footer from './Components/Footer'; 
 import Listing from './Listing';
@@ -8,6 +7,8 @@ import Details from './Components/Details/Details';
 import PlaceOrder from './Components/Booking/PlaceOrder';
 import ViewOrder from './Components/Booking/ViewOrder';
 import Login from './Components/Login/Login';
+import Register from './Components/Login/Register';
+import Alert from './Components/ExtraComponent/Alert';
 
 function Routing(props) {
     return (
@@ -22,6 +23,9 @@ function Routing(props) {
 <Route path="/placeOrder/:restName" element={<PlaceOrder />}/>
 <Route path='/ViewOrder' element={<ViewOrder />} />
 <Route path='/login' element={<Login />} />
+<Route path='/register' element={<Register />} />
+<Route path='/alert' element={<Alert />} />
+
 
 
 

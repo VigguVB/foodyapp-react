@@ -4,10 +4,13 @@ import { createBrowserHistory } from 'history';
 import './details.css'
 import Menulist from './Menulist';
 import Header from '../Header';
+import { useNavigate } from 'react-router-dom';
 
 function Details(props) {
     let param = useParams();
     let restId = param.restid;
+    sessionStorage.setItem('restId',restId)
+    const navigate = useNavigate()
 
 
     let restUrl = `https://foody-app-api.herokuapp.com/details/${restId}`
@@ -17,6 +20,7 @@ function Details(props) {
     const [restData, setRestData] = useState("")
     const [menuData, setMenuData] = useState("")
     const [finalOrderData, setFinalOrderData] = useState('')
+    
 
 
     useEffect(() => {
@@ -38,6 +42,7 @@ function Details(props) {
     const addToCart = (data) => {
 
         setFinalOrderData(data)
+        sessionStorage.setItem("orderChoosed", data)
     }
     // const itemsAdded = (items)=>{
     //     if(items){
@@ -52,10 +57,19 @@ function Details(props) {
     // }
 
     const proceed = () => {
-        // const history = createBrowserHistory()
-        sessionStorage.setItem("menu", finalOrderData)
-        // history.push(`/placeOrder/${restData[0].restaurant_name}`)
+        let login = sessionStorage.getItem('loginStatus')
+        console.log(typeof login)
 
+        sessionStorage.setItem("menu", finalOrderData)
+        if(finalOrderData.length<1){
+            alert("Please Add atleast one Items to the cart before CheckOut")
+        }if(sessionStorage.getItem('loginStatus')==="false"){
+            console.log("else ifrunning")
+            navigate('/alert')
+        } else {
+            navigate(`/placeOrder/${restData[0].restaurant_name}`)
+            console.log("else running")
+        }
     }
     return (
         <>
@@ -84,9 +98,9 @@ function Details(props) {
                                 <Link to={`/listing/${sessionid}`}>
                                     <button id="back">BACK</button>
                                 </Link>
-                                <Link to={`/placeOrder/${restData[0].restaurant_name}`}>
+                               
                                     <button onClick={proceed} id="checkout">CHECKOUT</button>
-                                </Link>
+                              
 
 
                             </div>

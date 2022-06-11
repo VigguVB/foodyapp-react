@@ -63,7 +63,7 @@ function Menulist(props) {
 
         <div>
             <h2 style={{textAlign:"center"}}>Menu Items</h2>
-            <button onClick={showOrders}>View Added Items/ Refresh</button>
+            <button id="show" onClick={showOrders}>View Added Items/ Refresh</button>
             <h3 style={{backgroundColor:"rgb(91, 237, 156)"}}>{items}</h3>
             {menuitems(props)}
         </div>
